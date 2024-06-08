@@ -1,0 +1,331 @@
+
+/* Responsive header design -start */
+.maincontain {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+  height: 86px;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+	margin-top: -25px;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: #31316c;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+/* Responsive header design -end */
+
+/* Slider start*/
+  .slider {
+    width: 100%;
+    height: 510px;
+    position: relative;
+  }
+
+  .slider img {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* transition: all 0.5s ease-in-out; */
+  }
+
+  .slider img:first-child {
+    z-index: 1;
+  }
+
+  .slider img:nth-child(2) {
+    z-index: 0;
+  }
+
+  .navigation-button {
+    text-align: center;
+    position: relative;
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .active,
+  .dot:hover {
+    background-color: #717171;
+  }
+ /* Slider end*/ 
+ 
+ /* about start*/
+ .sectionHeading{margin:1rem 0;font-weight: 400;font-size: 1.6rem; margin-top: 60px;}
+ .sectionHeading:after{content: "";display: block;position: relative;height: 4px;background: #1c42f1;width: 300px;margin-left: auto;margin-right: auto;margin-top: 20px;}
+ .text-center {
+    text-align: center !important;
+ }
+ 
+ /* about end*/
+
+
+ /* Service container start */
+ body{
+  font-family: sans-serif;
+
+}
+.container{
+  display: grid;
+
+}
+.container__box{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px,1fr));
+  gap: 15px;
+}
+.container .container__box .box{
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 5px 5px 6px #333;
+  text-align: center;
+  padding: 20px 30px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  transition: .2s, linear;
+}
+.container__heading{
+  text-align: center;
+  padding-bottom: 15px;
+  color: #e3e3e3;
+  text-shadow: 0 0 10px black;
+  font-size: 50px;
+  font-weight: 600;
+}
+.container .container__box .box h3{
+  color: #31316c;
+  font-size: 20px;
+  font-weight: 600;
+}
+.container .container__box .box p{
+  font-size: 14px;
+  font-weight: 100;
+  color: #555;
+}
+.container .container__box .box a{
+  border-radius: 4px;
+  background:#444;
+  color: white;
+}
+.container .container__box .box a:hover{
+  background: #908080;
+}
+.frame {
+  width: 225px;
+  border: 3px solid #ccc;
+  background: #eee;
+  margin: auto;
+  padding: 15px 10px;
+  transform: perspective(1500px) rotateY(15deg);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  transition: transform 1s ease 0s;
+  &:hover {
+    transform: perspective(3000px) rotateY(5deg);
+  }
+  
+  
+}
+
+ /* Service container end */
+ 
+ /* footer -start */
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+.footer{
+  background-color: #111111;
+  padding: 70px 0;
+}
+.footer-col{
+ width: 25%;
+ padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li :hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: #222222;
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #333333;
+  background-color: #ffffff;
+}
+.copyright-footer{
+display:flex;
+justify-content: center;
+align-items: center;
+background-color: #222222;
+padding:20px;
+color:#999999;
+}
+.copyright-footer p a{
+color:#e91e63;
+}
+/*responsive*/
+@media(max-width: 767px){
+.footer-col{
+  width: 50%;
+  margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+.footer-col{
+  width: 100%;
+}
+}
+ /* footer -end */
+ /* whatsapp -start */
+ .float{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  left:40px;
+  background-color:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+    font-size:30px;
+  box-shadow: 2px 2px 3px #999;
+    z-index:100;
+   }
+
+  .my-float{
+    margin-top:16px;
+  }
+ /* whatsapp -end */
